@@ -1,0 +1,15 @@
+{
+  "name": "@deadlocked247/tailwindcss-leading-trim",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tailwindcss build styles.css -o ./dist/styles.css"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^2.2.19"
+  }
+}

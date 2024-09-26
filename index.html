@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Tailwind Plugin Test</title>
+    <link rel="stylesheet" href="./dist/styles.css" />
+    <style>
+      .art {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        background: rgb(0 153 255 / 5%);
+      }
+
+      .box:first-of-type {
+        animation: boxTop infinite 2s;
+      }
+
+      .box-b {
+        animation: boxBottom infinite 2s;
+      }
+
+      .box {
+        height: 24px;
+        display: block;
+        background: rgb(0 153 255 / 15%);
+      }
+
+      .art svg {
+        left: 50%;
+        transform: translateX(-50%);
+        position: absolute;
+      }
+
+      @media (max-width: 768px) {
+        .box {
+          height: 12px;
+        }
+
+        .art svg {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body class="md:px-0 px-5 bg-white flex min-h-screen">
+    <main class="max-w-lg text-center py-16 mx-auto">
+      <img
+        style="margin-bottom: 18px"
+        class="h-60 w-60 lg:h-80 lg:w-80 mx-auto"
+        src="image.webp"
+      />
+      <div class="art">
+        <div class="box"></div>
+        <div>
+          <svg
+            width="1506"
+            height="1"
+            viewBox="0 0 1506 1"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <line
+              y1="0.5"
+              x2="1506"
+              y2="0.5"
+              stroke="url(#paint0_linear_165_7)"
+              stroke-dasharray="6 6"
+            />
+            <defs>
+              <linearGradient
+                id="paint0_linear_165_7"
+                x1="0"
+                y1="1.5"
+                x2="1506"
+                y2="1.5"
+                gradientUnits="userSpaceOnUse"
+              >
+                <stop stop-color="white" />
+                <stop offset="0.5" stop-color="rgb(0 153 255 / 15%)" />
+                <stop offset="1" stop-color="white" />
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        <h1 class="text-2xl lg:text-4xl font-bold leading-trim">
+          Design pages with perfect vertical harmony.
+        </h1>
+        <div>
+          <svg
+            width="1506"
+            height="1"
+            viewBox="0 0 1506 1"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <line
+              y1="0.5"
+              x2="1506"
+              y2="0.5"
+              stroke="url(#paint0_linear_165_7)"
+              stroke-dasharray="6 6"
+            />
+            <defs>
+              <linearGradient
+                id="paint0_linear_165_7"
+                x1="0"
+                y1="1.5"
+                x2="1506"
+                y2="1.5"
+                gradientUnits="userSpaceOnUse"
+              >
+                <stop stop-color="white" />
+                <stop offset="0.5" stop-color="rgb(0 153 255 / 15%)" />
+                <stop offset="1" stop-color="white" />
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        <div class="box box-b"></div>
+      </div>
+      <p class="mt-8 text-base leading-trim">
+        Remove leading trim from your typography classes in tailwindcss.
+        Responsive and simple to add to any existing tailwind project.
+      </p>
+      <p class="font-bold text-base mt-8 mb-1">Installation:</p>
+      <div>
+        <code class="text-xs bg-gray-200 text-gray-800 px-2 py-1 rounded"
+          >npm i --save-dev @deadlocked247/tailwindcss-leading-trim</code
+        >
+      </div>
+      <div class="mt-1">
+        <code class="text-xs bg-gray-200 text-gray-800 px-2 py-1 rounded"
+          >yarn add -D @deadlocked247/tailwindcss-leading-trim</code
+        >
+      </div>
+    </main>
+  </body>
+</html>
