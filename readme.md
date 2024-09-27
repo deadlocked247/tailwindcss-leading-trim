@@ -64,16 +64,6 @@ Trim the end:
 </div>
 ```
 
-## Example of Trimmed Text
-
-An example using the `leading-trim-both` class:
-
-```
-The quick brown fox jumps over the lazy dog
-```
-
-You can also trim only the start or the end for different typographic effects.
-
 ---
 
 ## Credits
