@@ -1,10 +1,11 @@
 {
   "name": "tailwind-leading-trim",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "",
   "files": [
     "index.js",
-    "README.md"
+    "README.md",
+    "metrics.json"
   ],
   "main": "index.js",
   "scripts": {
