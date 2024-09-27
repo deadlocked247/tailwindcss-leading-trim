@@ -1,11 +1,11 @@
 const plugin = require("./");
 
 module.exports = {
-  content: [],
+  content: ["./**/*.{html,js}"],
   theme: {
-    extend: {},
+    fontFamily: {
+      sans: "Inter",
+    },
   },
-  plugins: [
-    plugin({ metrics: { ascent: 1984, descent: -494, unitsPerEm: 2048 } }),
-  ],
+  plugins: [plugin],
 };

@@ -6,12 +6,17 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Tailwind Plugin Test</title>
     <link rel="stylesheet" href="./dist/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
     <style>
       .art {
         display: flex;
         justify-content: center;
         flex-direction: column;
-        background: rgb(0 153 255 / 5%);
       }
 
       .box:first-of-type {
@@ -25,7 +30,6 @@
       .box {
         height: 24px;
         display: block;
-        background: rgb(0 153 255 / 15%);
       }
 
       .art svg {
@@ -43,105 +47,186 @@
           display: none;
         }
       }
+
+      .line {
+        position: absolute;
+        left: 0;
+        right: 0;
+        opacity: 0.6;
+        border-top: rgb(0, 76, 175) dashed 1px;
+        height: 1px;
+      }
+
+      .fill {
+        position: absolute;
+        left: 0;
+        right: 0;
+        height: 46px;
+        background: rgb(0, 76, 175);
+        opacity: 0.1;
+      }
+
+      .fill-bottom {
+        bottom: 0;
+      }
+
+      .fill-top {
+        top: 0;
+      }
     </style>
   </head>
-  <body class="md:px-0 px-5 bg-white flex min-h-screen">
+  <body
+    class="text-gray-900 font-sans flex-col md:px-0 px-5 bg-white flex min-h-screen"
+  >
     <a
       target="__blank"
-      class="absolute top-0 right-0 m-4"
+      class="fixed top-0 right-0 m-4"
       href="https://github.com/deadlocked247/tailwindcss-leading-trim"
       ><img class="w-8 h-8" src="./github-mark.svg"
     /></a>
-    <main class="max-w-lg text-center py-16 mx-auto">
-      <img
-        style="margin-bottom: 18px"
-        class="h-60 w-60 lg:h-80 lg:w-80 mx-auto"
-        src="image.webp"
-      />
-      <div class="art">
-        <div class="box"></div>
-        <div>
-          <svg
-            width="1506"
-            height="1"
-            viewBox="0 0 1506 1"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <line
-              y1="0.5"
-              x2="1506"
-              y2="0.5"
-              stroke="url(#paint0_linear_165_7)"
-              stroke-dasharray="6 6"
-            />
-            <defs>
-              <linearGradient
-                id="paint0_linear_165_7"
-                x1="0"
-                y1="1.5"
-                x2="1506"
-                y2="1.5"
-                gradientUnits="userSpaceOnUse"
-              >
-                <stop stop-color="white" />
-                <stop offset="0.5" stop-color="rgb(0 153 255 / 15%)" />
-                <stop offset="1" stop-color="white" />
-              </linearGradient>
-            </defs>
-          </svg>
+    <div class="max-w-xl py-4 mx-auto">
+      <div class="text-center">
+        <div class="relative inline-block my-8">
+          <div style="font-size: 120px" class="bg-blue-50 px-2 inline-block">
+            Hg
+          </div>
+          <div class="line" style="bottom: 46px; right: -10px"></div>
+          <div class="line" style="bottom: 20px; left: -10px"></div>
+          <div class="line" style="top: 46px; left: -10px"></div>
+          <div class="line" style="top: 20px; right: -10px"></div>
+          <div class="fill fill-bottom"></div>
+          <div class="fill fill-top"></div>
         </div>
-        <h1 class="text-2xl md:text-4xl font-bold leading-trim">
+      </div>
+      <div class="art">
+        <h1
+          class="relative z-10 lg:px-4 text-balance text-2xl text-center md:text-4xl font-bold leading-trim-both"
+        >
           Design pages with perfect vertical harmony.
         </h1>
-        <div>
-          <svg
-            width="1506"
-            height="1"
-            viewBox="0 0 1506 1"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <line
-              y1="0.5"
-              x2="1506"
-              y2="0.5"
-              stroke="url(#paint0_linear_165_7)"
-              stroke-dasharray="6 6"
-            />
-            <defs>
-              <linearGradient
-                id="paint0_linear_165_7"
-                x1="0"
-                y1="1.5"
-                x2="1506"
-                y2="1.5"
-                gradientUnits="userSpaceOnUse"
-              >
-                <stop stop-color="white" />
-                <stop offset="0.5" stop-color="rgb(0 153 255 / 15%)" />
-                <stop offset="1" stop-color="white" />
-              </linearGradient>
-            </defs>
-          </svg>
-        </div>
-        <div class="box box-b"></div>
       </div>
-      <p class="mt-8 text-base leading-trim">
+      <p class="mt-8 text-xl text-balance text-center leading-trim">
         Adds leading trim to your typography classes in tailwindcss. Responsive
         and simple to add to any existing tailwind project.
       </p>
-      <p class="font-bold text-base mt-8 mb-1">Installation:</p>
+    </div>
+    <div class="bg-gray-50 mt-12 py-12 flex items-center">
+      <div class="max-w-xl w-full mx-auto">
+        <p class="font-bold text-lg mt-8 mb-1">Installation:</p>
+        <div>
+          <code class="text-xs bg-gray-200 text-gray-800 px-2 py-1 rounded"
+            >npm i --save-dev tailwind-leading-trim</code
+          >
+        </div>
+        <div class="mt-1">
+          <code class="text-xs bg-gray-200 text-gray-800 px-2 py-1 rounded"
+            >yarn add -D tailwind-leading-trim</code
+          >
+        </div>
+        <p class="font-bold text-lg mt-8 mb-1">Setup:</p>
+        <ol class="space-y-4 text-left w-full list-decimal">
+          <li>
+            Import plugin in
+            <code class="text-xs bg-gray-200 text-gray-800 px-2 py-1 rounded"
+              >tailwind.config.js</code
+            >
+          </li>
+          <li>
+            <div>
+              Add the corresponding metrics for your type in the config, most
+              Google fonts are already supported but you can visit
+              <a
+                target="__blank"
+                class="underline text-blue-500"
+                href="https://seek-oss.github.io/capsize/"
+                >this website</a
+              >
+              to find the metrics for other fonts.
+            </div>
+            <pre
+              class="mt-2 block text-xs p-4 bg-gray-100 text-gray-800 rounded"
+            >
+module.exports = {
+  ...
+  theme: {
+    fontFamily: {
+      "sans": "Inter",
+    },
+    fontMetrics: { 
+      "capHeight": 2048,
+      "ascent": 2728,
+      "descent": -680,
+      "lineGap": 0,
+      "unitsPerEm": 2816,
+    },
+  },
+  ...
+  plugins: [require('tailwind-leading-trim')],
+}
+            </pre>
+          </li>
+          <li>
+            <div class="mb-4">
+              Use the tailwind class to trim leading on both the start and the
+              end.<br />
+              <strong
+                >Font-family must be explicitly set on the element or a parent
+                element with a tailwind class for the correct type
+                metrics.</strong
+              >
+            </div>
+            <pre
+              class="text-xs bg-gray-100 text-gray-800 p-4 rounded"
+              style="white-space: pre-wrap; word-wrap: break-word"
+            >
+&lt;div className="text-4xl font-sans leading-trim-both"&gt;
+  The quick brown fox jumps over the lazy dog
+&lt;/div&gt;</pre
+            >
+            <div class="bg-blue-100 p-8 mt-4">
+              <div class="text-4xl font-sans bg-white leading-trim-both">
+                The quick brown fox jumps over the lazy dog
+              </div>
+            </div>
+            <div class="my-4">You can also only trim the start or the end</div>
+            <pre
+              class="text-xs bg-gray-100 text-gray-800 p-4 rounded"
+              style="white-space: pre-wrap; word-wrap: break-word"
+            >
+&lt;div className="text-4xl font-sans leading-trim-start"&gt;
+  The quick brown fox jumps over the lazy dog
+&lt;/div&gt;</pre
+            >
+            <div class="bg-blue-100 p-8 mt-4">
+              <div class="text-4xl font-sans bg-white leading-trim-start">
+                The quick brown fox jumps over the lazy dog
+              </div>
+            </div>
+            <hr />
+            <pre
+              class="text-xs bg-gray-100 text-gray-800 mt-4 p-4 rounded"
+              style="white-space: pre-wrap; word-wrap: break-word"
+            >
+&lt;div className="text-4xl font-sans leading-trim-end"&gt;
+  The quick brown fox jumps over the lazy dog
+&lt;/div&gt;</pre
+            >
+            <div class="bg-blue-100 p-8 mt-4">
+              <div class="text-4xl font-sans bg-white leading-trim-end">
+                The quick brown fox jumps over the lazy dog
+              </div>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </div>
+    <footer class="bg-gray-100 text-center px-4 py-8 text-gray-600">
       <div>
-        <code class="text-xs bg-gray-200 text-gray-800 px-2 py-1 rounded"
-          >npm i --save-dev @deadlocked247/tailwindcss-leading-trim</code
+        Created by
+        <a href="https://x.com/turkishtea__" class="underline" target="__blank"
+          >Burak Aslan</a
         >
       </div>
-      <div class="mt-1">
-        <code class="text-xs bg-gray-200 text-gray-800 px-2 py-1 rounded"
-          >yarn add -D @deadlocked247/tailwindcss-leading-trim</code
-        >
-      </div>
-    </main>
+    </footer>
   </body>
 </html>
