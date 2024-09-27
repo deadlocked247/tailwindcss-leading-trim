@@ -1,5 +1,7 @@
 # tailwind-leading-trim
 
+![Alt text](visual.png)
+
 ## Installation
 
 ```bash
