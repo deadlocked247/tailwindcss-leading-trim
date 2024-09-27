@@ -1,7 +1,5 @@
 # tailwind-leading-trim
 
-![Alt text](https://github.com/deadlocked247/tailwindcss-leading-trim/blob/main/visual.png)
-
 ## Installation
 
 ```bash
